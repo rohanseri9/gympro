@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <span>My</span>Healthy Fit
+        </a>
+        <!-- Mobile responsive -->
+        <!-- <div id="menu-btn" class="fas fa-bars"></div> -->
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#trainers">Trainers</a>
+            <a href="#blog">blog</a>
+        </nav>
+    </header>
+<section class="home" id="home">
+  <body class="vs">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="./images/1.jpg" style="width:100%">
+        <div class="text">Exercising is good for our health<br>
+          <a href="#" class="btn">Gets started</a>
+        </div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="./images/2.jpg" style="width:100%">
+        <div class="text">Exercising is good for our health<br>
+          <a href="#" class="btn">Gets started</a>
+        </div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="./images/3.jpg" style="width:100%">
+        <div class="text">Exercising is good for our health<br>
+          <a href="#" class="btn">Gets started</a>
+        </div>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+        
+      
+            </section>
+          
+            <div class=" #about">
+                <h2><b>about-us</b></h2>
+            </div>
+</body>
+    <section class="about" id="about">
+        <div class="card">
+            <img src="./images/card.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h1><b>about-gym</b></h1> 
+             
+            <a href="#" class="btn">read more</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./images/name.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h1><b>contact-us</b></h1> 
+                
+            <a href="#" class="btn">read more</a>
+            </div>
+          </div> 
+</section>
+<div class=" #Features">
+    <h2><b>Features</b></h2>
+</div>
+<section class="features" id="features">
+    <div class="card">
+        <img src="./images/card1.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h1><b>Variety of Training</b></h1> 
+          <p>In terms of fitness and training, everyone is unique. Some people need one on one personal training programs, while others just want to show up for a fitness class.</p>  
+        <a href="#" class="btn">read more</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/99.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h1><b>High-Quality Exercise Equipment </b></h1> 
+          <p>All gym equipment should be clean, well-maintained, and in good working order. By creating a highly connected fitness experience and leveraging wearables </p>  
+        <a href="#" class="btn">read more</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/girl.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h1><b>Thriving Community </b></h1> 
+          <p>Human social connection is essential for health and happiness. Health clubs are an ideal place to satisfy both physical and social needs. Even though technology allows</p>  
+        <a href="#" class="btn">read more</a>
+        </div>
+      </div>
+</section>
+        <div class="#Pricing">
+                <h2><b>Pricing</b></h2>
+            </div>
+        <section class="pricing" id="pricing">
+            
+            
+            <div class="card">
+                <img src="./images/prince.jpg" alt="Avatar" style="width:100%" class="avatar">
+                <div class="container">
+                  <form action="/action_page.php" method="get">
+                  <p>monthly prince<br>
+                    <input type="radio"name="pricing" value="1-month pricing $25" checked="checked" />1-month pricing $25 <br>
+                    <input type="radio"name="pricing" value="3-month pricing $45" checked="checked" />3-month pricing $45  <br>
+                    <input type="radio"name="pricing" value="6-month pricing $65" checked="checked" />6-month pricing $65 <br>
+
+                  </p>  
+                  </form>
+                <a href="#" class="btn">BUY</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./images/prince.jpg" alt="Avatar" style="width:100%" class="avatar">
+                <div class="container"> 
+                    <form action="/action_page.php" method="get">
+                  <p>year pricing<br>
+                <input type="radio"name="pricing" value="one-year pricing $250" checked="checked" />one-year pricing $250 <br>
+                <input type="radio"name="pricing" value="two-year pricing $250" checked="checked" />two-year pricing $450 <br>
+                <input type="radio"name="pricing" value="three-year pricing $250" checked="checked" />three-year pricing $650 <br>
+                  </p> 
+                    </form>
+                <a href="#" class="btn">BUY</a>
+                </div>
+              </div>
+              </section>
+              <div class="#trainers">
+                <h2><b>traines</b></h2>
+            </div>
+            <section class="trainers" id="trainers">
+              <div class="card">
+                <img src="./images/trainer1.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                  <h1><b>seri rohan</b></h1> 
+                  <p>personal training </p>  
+                <a href="#" class="btn">read more</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./images/tranier2.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                  <h1><b>pranavi</b></h1> 
+                  <p>  personal training</p>  
+                <a href="#" class="btn">read more</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./images/Trainer3.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                  <h1><b>narendra</b></h1> 
+                  <p> professional gym trainer</p>  
+                <a href="#" class="btn">read more</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./images/card.jpg" alt="Avatar" style="width:60%">
+                <div class="container">
+                  <h1><b>ankita</b></h1> 
+                  <p> professional gym trainer</p>  
+                <a href="#" class="btn">read more</a>
+                </div>
+              </div>
+            </section>
+            <div class="#blog">
+              <h2><b>blog</b></h2>
+          </div>
+          <section class="blog" id="blog">
+            <div class="card">
+              <img src="./images/quotes1.jpg" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h1><b>Fit Forward</b></h1> 
+                <p>No matter your age, it is important to take part in sport and fitness activities on a regular basis. Of course, it becomes more important to stay active in our older years in order to stay fit and healthy.</p>  
+              <a href="#" class="btn">read more</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="./images/quotes5.jpg" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h1><b>WHAT IS MODERATE INTENSITY EXERCISE?</b></h1> 
+                <p>Cycling<br>
+                  Volleyball<br>
+                  Walking<br>
+                  Water aerobics<br>
+                  Doubles tennis</p>  
+              <a href="#" class="btn">read more</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="./images/quoties2.jpg" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h1><b>WHAT IS VIGOROUS INTENSITY EXERCISE?<br></b></h1> 
+                <p>Alternatively, if you are already fairly active, you could choose to aim for 75 minutes of vigorous aerobic activity each week instead of 150 minutes of moderate intensity exercise.</p>  
+              <a href="#" class="btn">read more</a>
+              </div>
+            </div>
+          </section>
+         
+    
+
+         <!---- <div class="content"!-->
+        
+          <!----  <a href="#" class="btn">Gets started</a> !--->
+        <!--</div!-->
+          
+
+</body>
+</html>
